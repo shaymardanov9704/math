@@ -5,6 +5,7 @@ import 'package:math/application/provider/provider.dart';
 import 'package:math/di.dart';
 import 'package:math/presentation/app/app.dart';
 import 'package:math/presentation/pages/home_page.dart';
+import 'package:math/presentation/pages/main/main_page.dart';
 import 'package:provider/provider.dart';
 
 import 'presentation/utils/themes.dart';
@@ -18,7 +19,7 @@ void main() async {
       ],
       child: App(
         hive: di.get(),
-        enabledPreview: true,
+        enabledPreview: false,
         child: const MyApp(),
       ),
     ));

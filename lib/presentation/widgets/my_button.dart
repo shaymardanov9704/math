@@ -14,14 +14,6 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (child == 'C') {
-      buttonColor = Colors.grey;
-    } else if (child == 'DEL') {
-      buttonColor = Colors.grey;
-    } else if (child == '=') {
-      buttonColor = Colors.grey;
-    }
-
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: GestureDetector(
