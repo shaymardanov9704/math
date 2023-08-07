@@ -1,0 +1,44 @@
+name: math
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_bloc: ^8.1.3
+  bloc: ^8.1.2
+  bloc_concurrency: ^0.2.2
+  freezed: ^2.4.2
+  freezed_annotation: ^2.4.1
+  google_fonts: ^5.1.0
+  flutter_easyloading: ^3.0.5
+  easy_localization: ^3.0.2
+  hive: ^2.2.3
+  provider: ^6.0.5
+  path_provider: ^2.0.15
+  get_it: ^7.6.0
+  device_preview: ^1.1.0
+  flutter_tex: ^4.0.3+4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  build_runner: ^2.4.6
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/tr/
