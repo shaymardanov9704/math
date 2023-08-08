@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:math/application/provider/provider.dart';
 import 'package:math/di.dart';
@@ -33,9 +34,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      themeMode: context.watch<ThemeProvider>().themeMode,
       theme: AppThemes.light(),
       darkTheme: AppThemes.dark(),
-      home: const HomePage(),
+      home: const MainPage(),
     );
   }
 }

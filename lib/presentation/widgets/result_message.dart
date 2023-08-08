@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:math/presentation/widgets/consts.dart';
+import 'package:math/presentation/utils/text_styles.dart';
 
 class ResultMessage extends StatelessWidget {
   final String message;
@@ -25,14 +25,14 @@ class ResultMessage extends StatelessWidget {
             // the result
             Text(
               message,
-              style: whiteTextStyle,
+              style: AppTextStyles.style600,
             ),
 
             // button to go to next question
             GestureDetector(
               onTap: onTap,
               child: Container(
-                padding: EdgeInsets.all(4),
+                padding: const EdgeInsets.all(4),
                 decoration: BoxDecoration(
                   color: Colors.deepPurple[300],
                   borderRadius: BorderRadius.circular(8),

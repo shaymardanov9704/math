@@ -19,32 +19,38 @@ mixin _$QuickMathEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
+    required TResult Function() enter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
+    TResult? Function()? enter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
+    TResult Function()? enter,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_init value) init,
+    required TResult Function(_enter value) enter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_init value)? init,
+    TResult? Function(_enter value)? enter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_init value)? init,
+    TResult Function(_enter value)? enter,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -105,6 +111,7 @@ class _$_init implements _init {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() init,
+    required TResult Function() enter,
   }) {
     return init();
   }
@@ -113,6 +120,7 @@ class _$_init implements _init {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? init,
+    TResult? Function()? enter,
   }) {
     return init?.call();
   }
@@ -121,6 +129,7 @@ class _$_init implements _init {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? init,
+    TResult Function()? enter,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -133,6 +142,7 @@ class _$_init implements _init {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_init value) init,
+    required TResult Function(_enter value) enter,
   }) {
     return init(this);
   }
@@ -141,6 +151,7 @@ class _$_init implements _init {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_init value)? init,
+    TResult? Function(_enter value)? enter,
   }) {
     return init?.call(this);
   }
@@ -149,6 +160,7 @@ class _$_init implements _init {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_init value)? init,
+    TResult Function(_enter value)? enter,
     required TResult orElse(),
   }) {
     if (init != null) {
@@ -163,22 +175,132 @@ abstract class _init implements QuickMathEvent {
 }
 
 /// @nodoc
+abstract class _$$_enterCopyWith<$Res> {
+  factory _$$_enterCopyWith(_$_enter value, $Res Function(_$_enter) then) =
+      __$$_enterCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_enterCopyWithImpl<$Res>
+    extends _$QuickMathEventCopyWithImpl<$Res, _$_enter>
+    implements _$$_enterCopyWith<$Res> {
+  __$$_enterCopyWithImpl(_$_enter _value, $Res Function(_$_enter) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_enter implements _enter {
+  _$_enter();
+
+  @override
+  String toString() {
+    return 'QuickMathEvent.enter()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_enter);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function() enter,
+  }) {
+    return enter();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function()? enter,
+  }) {
+    return enter?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function()? enter,
+    required TResult orElse(),
+  }) {
+    if (enter != null) {
+      return enter();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_init value) init,
+    required TResult Function(_enter value) enter,
+  }) {
+    return enter(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_init value)? init,
+    TResult? Function(_enter value)? enter,
+  }) {
+    return enter?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_init value)? init,
+    TResult Function(_enter value)? enter,
+    required TResult orElse(),
+  }) {
+    if (enter != null) {
+      return enter(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _enter implements QuickMathEvent {
+  factory _enter() = _$_enter;
+}
+
+/// @nodoc
 mixin _$QuickMathState {
   EnumStatus get status => throw _privateConstructorUsedError;
   String get message => throw _privateConstructorUsedError;
+  int get numberA => throw _privateConstructorUsedError;
+  int get numberB => throw _privateConstructorUsedError;
+  int get result => throw _privateConstructorUsedError;
+  int get timer => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(EnumStatus status, String message) state,
+    required TResult Function(EnumStatus status, String message, int numberA,
+            int numberB, int result, int timer)
+        state,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(EnumStatus status, String message)? state,
+    TResult? Function(EnumStatus status, String message, int numberA,
+            int numberB, int result, int timer)?
+        state,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(EnumStatus status, String message)? state,
+    TResult Function(EnumStatus status, String message, int numberA,
+            int numberB, int result, int timer)?
+        state,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -210,7 +332,13 @@ abstract class $QuickMathStateCopyWith<$Res> {
           QuickMathState value, $Res Function(QuickMathState) then) =
       _$QuickMathStateCopyWithImpl<$Res, QuickMathState>;
   @useResult
-  $Res call({EnumStatus status, String message});
+  $Res call(
+      {EnumStatus status,
+      String message,
+      int numberA,
+      int numberB,
+      int result,
+      int timer});
 }
 
 /// @nodoc
@@ -228,6 +356,10 @@ class _$QuickMathStateCopyWithImpl<$Res, $Val extends QuickMathState>
   $Res call({
     Object? status = null,
     Object? message = null,
+    Object? numberA = null,
+    Object? numberB = null,
+    Object? result = null,
+    Object? timer = null,
   }) {
     return _then(_value.copyWith(
       status: null == status
@@ -238,6 +370,22 @@ class _$QuickMathStateCopyWithImpl<$Res, $Val extends QuickMathState>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+      numberA: null == numberA
+          ? _value.numberA
+          : numberA // ignore: cast_nullable_to_non_nullable
+              as int,
+      numberB: null == numberB
+          ? _value.numberB
+          : numberB // ignore: cast_nullable_to_non_nullable
+              as int,
+      result: null == result
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as int,
+      timer: null == timer
+          ? _value.timer
+          : timer // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -249,7 +397,13 @@ abstract class _$$_stateCopyWith<$Res>
       __$$_stateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({EnumStatus status, String message});
+  $Res call(
+      {EnumStatus status,
+      String message,
+      int numberA,
+      int numberB,
+      int result,
+      int timer});
 }
 
 /// @nodoc
@@ -264,6 +418,10 @@ class __$$_stateCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
     Object? message = null,
+    Object? numberA = null,
+    Object? numberB = null,
+    Object? result = null,
+    Object? timer = null,
   }) {
     return _then(_$_state(
       status: null == status
@@ -274,6 +432,22 @@ class __$$_stateCopyWithImpl<$Res>
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+      numberA: null == numberA
+          ? _value.numberA
+          : numberA // ignore: cast_nullable_to_non_nullable
+              as int,
+      numberB: null == numberB
+          ? _value.numberB
+          : numberB // ignore: cast_nullable_to_non_nullable
+              as int,
+      result: null == result
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as int,
+      timer: null == timer
+          ? _value.timer
+          : timer // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -281,7 +455,13 @@ class __$$_stateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_state implements _state {
-  _$_state({this.status = EnumStatus.initial, this.message = ""});
+  _$_state(
+      {this.status = EnumStatus.initial,
+      this.message = "",
+      this.numberA = 0,
+      this.numberB = 0,
+      this.result = 0,
+      this.timer = 0});
 
   @override
   @JsonKey()
@@ -289,10 +469,22 @@ class _$_state implements _state {
   @override
   @JsonKey()
   final String message;
+  @override
+  @JsonKey()
+  final int numberA;
+  @override
+  @JsonKey()
+  final int numberB;
+  @override
+  @JsonKey()
+  final int result;
+  @override
+  @JsonKey()
+  final int timer;
 
   @override
   String toString() {
-    return 'QuickMathState.state(status: $status, message: $message)';
+    return 'QuickMathState.state(status: $status, message: $message, numberA: $numberA, numberB: $numberB, result: $result, timer: $timer)';
   }
 
   @override
@@ -301,11 +493,16 @@ class _$_state implements _state {
         (other.runtimeType == runtimeType &&
             other is _$_state &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.numberA, numberA) || other.numberA == numberA) &&
+            (identical(other.numberB, numberB) || other.numberB == numberB) &&
+            (identical(other.result, result) || other.result == result) &&
+            (identical(other.timer, timer) || other.timer == timer));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status, message);
+  int get hashCode => Object.hash(
+      runtimeType, status, message, numberA, numberB, result, timer);
 
   @JsonKey(ignore: true)
   @override
@@ -316,27 +513,33 @@ class _$_state implements _state {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(EnumStatus status, String message) state,
+    required TResult Function(EnumStatus status, String message, int numberA,
+            int numberB, int result, int timer)
+        state,
   }) {
-    return state(status, message);
+    return state(status, message, numberA, numberB, result, timer);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(EnumStatus status, String message)? state,
+    TResult? Function(EnumStatus status, String message, int numberA,
+            int numberB, int result, int timer)?
+        state,
   }) {
-    return state?.call(status, message);
+    return state?.call(status, message, numberA, numberB, result, timer);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(EnumStatus status, String message)? state,
+    TResult Function(EnumStatus status, String message, int numberA,
+            int numberB, int result, int timer)?
+        state,
     required TResult orElse(),
   }) {
     if (state != null) {
-      return state(status, message);
+      return state(status, message, numberA, numberB, result, timer);
     }
     return orElse();
   }
@@ -371,12 +574,26 @@ class _$_state implements _state {
 }
 
 abstract class _state implements QuickMathState {
-  factory _state({final EnumStatus status, final String message}) = _$_state;
+  factory _state(
+      {final EnumStatus status,
+      final String message,
+      final int numberA,
+      final int numberB,
+      final int result,
+      final int timer}) = _$_state;
 
   @override
   EnumStatus get status;
   @override
   String get message;
+  @override
+  int get numberA;
+  @override
+  int get numberB;
+  @override
+  int get result;
+  @override
+  int get timer;
   @override
   @JsonKey(ignore: true)
   _$$_stateCopyWith<_$_state> get copyWith =>

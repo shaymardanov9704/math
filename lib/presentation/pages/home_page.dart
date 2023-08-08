@@ -1,9 +1,8 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:math/presentation/widgets/consts.dart';
+import 'package:math/presentation/utils/text_styles.dart';
+import 'package:math/presentation/widgets/number_button.dart';
 import 'package:math/presentation/widgets/result_message.dart';
-import '../widgets/my_button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -126,9 +125,8 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Text(
                     '$numberA + $numberB = ',
-                    style: whiteTextStyle,
+                    style: AppTextStyles.style600,
                   ),
-
                   Container(
                     height: 50,
                     width: 100,
@@ -139,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                     child: Center(
                       child: Text(
                         userAnswer,
-                        style: whiteTextStyle,
+                        style: AppTextStyles.style600,
                       ),
                     ),
                   )
@@ -158,7 +156,7 @@ class _HomePageState extends State<HomePage> {
                   crossAxisCount: 4,
                 ),
                 itemBuilder: (context, index) {
-                  return MyButton(
+                  return NumberButton(
                     child: numberPad[index],
                     onTap: () => buttonTapped(numberPad[index]),
                   );
